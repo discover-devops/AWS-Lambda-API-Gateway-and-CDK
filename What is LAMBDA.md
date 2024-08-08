@@ -10,6 +10,9 @@
 
 5. **Event-Driven**: Lambda functions are triggered by events (e.g., S3 uploads, API requests) rather than running continuously. This makes it ideal for unpredictable workloads.
 
+![image](https://github.com/user-attachments/assets/c498c877-8750-46c4-b7af-ce77fcff54f8)
+
+
 6. **Automatic Scaling**: Lambda automatically scales in response to incoming requests, without requiring manual intervention.
 
 7. **Use Cases**:
