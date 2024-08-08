@@ -7,6 +7,9 @@ AWS Lambda is a versatile compute service that excels in scenarios requiring rap
 ![image](https://github.com/user-attachments/assets/04e5d9ca-b6a3-4f32-b163-909df50aa10d)
 
 
+![image](https://github.com/user-attachments/assets/3b07ba12-8d38-4504-ade6-5f12de84821d)
+
+
 2. **Stream Processing**:
    - **Use Case**: Process real-time streaming data for various applications.
    - **Examples**:
