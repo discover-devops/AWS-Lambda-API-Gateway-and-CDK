@@ -1,4 +1,4 @@
-Sure, here's a concise summary of the key points related to AWS Lambda:
+### key points related to AWS Lambda:
 
 1. **Compute Service**: AWS Lambda is a compute service similar to EC2 but designed for serverless operations.
 
