@@ -4,6 +4,9 @@ AWS Lambda is a versatile compute service that excels in scenarios requiring rap
    - **Use Case**: Automate data processing in real-time when files are uploaded to Amazon S3.
    - **Example**: Resizing images or processing video files upon upload.
 
+![image](https://github.com/user-attachments/assets/04e5d9ca-b6a3-4f32-b163-909df50aa10d)
+
+
 2. **Stream Processing**:
    - **Use Case**: Process real-time streaming data for various applications.
    - **Examples**:
