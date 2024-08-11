@@ -31,7 +31,7 @@ def lambda_handler(event, context):
     
     # Create S3 bucket
     response = client.create_bucket(
-        Bucket='my_demo_27822782',
+        Bucket='mydemo27822782',
         CreateBucketConfiguration={
             'LocationConstraint': 'ap-sout-2'  # HYD India region
         }
