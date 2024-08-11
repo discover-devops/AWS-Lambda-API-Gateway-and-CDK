@@ -33,7 +33,7 @@ def lambda_handler(event, context):
     response = client.create_bucket(
         Bucket='my_demo_27822782',
         CreateBucketConfiguration={
-            'LocationConstraint': 'ap-southeast-2'  # Sydney region
+            'LocationConstraint': 'ap-sout-2'  # HYD India region
         }
     )
     
