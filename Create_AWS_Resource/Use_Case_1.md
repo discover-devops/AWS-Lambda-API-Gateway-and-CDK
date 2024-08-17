@@ -10,6 +10,9 @@ In this lab, you'll learn how to set up an automated process to create a new EC2
 - An AWS account with access to the EC2, Lambda, and EventBridge services.
 - Basic knowledge of AWS Lambda, EventBridge, and EC2.
 
+![image](https://github.com/user-attachments/assets/82da94dd-5884-4415-addc-76ba2944c384)
+
+
 ### Lab Overview
 1. **Create a Lambda Function to Launch EC2 Instances**
 2. **Set Up EventBridge Rule to Monitor EC2 Termination Events**
