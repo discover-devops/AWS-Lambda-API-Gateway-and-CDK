@@ -1,0 +1,299 @@
+Mastering AWS Lambda, API Gateway, and CDK: From Basics to Advanced Serverless Applications
+
+
+Course Outline
+Section 1: Introduction
+
+    Course Overview and Outline
+
+Section 2: AWS Lambda – Basic Concepts (Part 1)
+
+    Evolution from Physical Servers to AWS Lambda
+    What is AWS Lambda and Its Use Cases
+    Lambda Console Walkthrough
+    Understanding Lambda Execution Role
+    AWS Lambda Limits: Timeout
+
+Section 3: AWS Lambda – Basic Concepts (Part 2)
+
+    AWS Lambda Invocation Models
+    AWS Lambda Limits: Memory
+
+Section 4: AWS Lambda – Create S3, EC2, and DynamoDB Resources using Lambda
+
+    AWS Lambda Basics: Boto3, Client and Resource, Lambda Function Handler
+    AWS Lambda with S3: Create New Bucket, Delete Bucket, and List All Buckets
+    AWS Lambda with EC2: Create EC2, Start/Stop Instances
+    Lambda Automation Scenario: Integrating Lambda, EC2, and EventBridge
+    AWS Lambda with DynamoDB: Create Table and Put Items
+
+Section 5: API Gateway Overview
+
+    API Gateway Overview: API Types, API Endpoint Types
+    API Gateway Resources, Methods, and Integration Types
+    API Gateway Deployment, API Stages, API Keys, and Usage Plans
+    API Gateway Authentication and Authorization Methods
+    Private APIs and Private Integration
+
+Section 6: Serverless Project 2 - Enterprise Use Case using API Gateway, AWS Lambda, and S3
+
+    Part 1: Architecture and Design
+    Part 2: Implementation
+    Part 3: Final Integration and Testing
+
+Section 7: AWS CDK v2 - Setup and Pre-Requisites
+
+    AWS CDK Setup
+
+Section 8: AWS CDK - Basic Concepts
+
+    Evolution of AWS Infrastructure as Code
+    AWS CloudFormation Overview
+    What is AWS CDK and Its Benefits
+    AWS CDK Basic Concepts
+    AWS CDK Project Structure
+
+Section 9: AWS Service Creation using AWS CDK v2 - S3, DynamoDB, Lambda, and CloudWatch
+
+    Create S3 using AWS CDK v2
+    Create DynamoDB using AWS CDK v2
+    Create Lambda using AWS CDK v2
+    Create CloudWatch Alarm using AWS CDK v2
+    CDK Removal Policy: Removal, Retain, and Snapshot
+
+Section 10: Serverless Use Case 1 - API Gateway, Lambda, and S3
+
+    Architecture for Serverless Use Case
+    S3 Bucket Creation with CDK v2
+    IAM Role and S3 Creation with CDK v2
+    Lambda, IAM Role, and S3 Creation with CDK v2
+    API Gateway, Lambda, IAM Role, and S3 Creation with CDK v2
+    Optional: How to Write the Lambda Code (From Udemy Course on AWS Lambda)
+
+Section 11: Use Case 2 - Web Server: VPC, Subnets, EC2, and UserData
+
+    Architecture for Web Server Use Case
+    VPC, Subnets, and Other VPC Components
+    Security Groups
+    EC2 Instance
+    Adding UserData to EC2 Instance
+
+Section 12: CDK Best Practices - 10 Best Practices Based on Learnings from App Migrations
+AWS CDK - 10 Best Practices
+
+
+WAF
+
+
+======================
+
+Traditional Server in Your Data Center
+
+Ownership: You own and maintain the physical servers and infrastructure.
+Cost: High initial investment and ongoing costs for maintenance, electricity, and cooling.
+Scalability: Limited to the capacity of your physical servers; over-provisioning leads to wasted resources.
+Example: Preparing food for 20 people every day regardless of the actual number of guests.
+---------------
+
+Cloud Virtual Machine (VM)
+
+Ownership: You rent virtual machines from a cloud provider, no need to maintain physical hardware.
+Cost: Pay for the provisioned VMs, but with fixed capacity blocks (e.g., 5 people’s worth of food at a time).
+Scalability: Can auto-scale by adding more VMs, but each comes with fixed capacity, leading to potential waste.
+Example: Ordering food in fixed blocks from a takeout place, leading to potential waste if guests are fewer than blocks.
+
+
+Serverless
+
+Ownership: No ownership of infrastructure; you use services provided by the cloud.
+Cost: Pay only for the exact usage; no cost for idle resources.
+Scalability: Automatically scales with the load without manual intervention or fixed capacity blocks.
+Example: Ordering exact amount of food for the number of guests, no waste.
+
+
+Key Points on AWS Lambda (Serverless)
+
+Scalability: Automatically handles increased traffic by spawning new instances.
+Cost Efficiency: Pay for the number of executions rather than provisioned capacity.
+Management: No need to manage servers or auto-scaling configurations.
+Flexibility: Suitable for unpredictable workloads with varying traffic.
+
+
+Link:
+https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+
+
+
+Compute Service: AWS Lambda is a compute service similar to EC2 but designed for serverless operations.
+
+Serverless: It allows you to run code without provisioning or managing servers. AWS handles the infrastructure, including operating system maintenance, capacity provisioning, scaling, and logging.
+
+Highly Available: Lambda runs on a highly available compute infrastructure, automatically ensuring reliability and scalability.
+
+Pay-as-You-Go: Unlike EC2, where you pay for the provisioned instance size, Lambda charges you only for the compute time you actually use.
+
+Event-Driven: Lambda functions are triggered by events (e.g., S3 uploads, API requests) rather than running continuously. This makes it ideal for unpredictable workloads.
+
+Use Cases:
+
+Image Processing: Resize images upon upload to an S3 bucket.
+API Backend: Use Lambda with API Gateway to build scalable REST APIs.
+
+When Not to Use Lambda:
+
+When you need control over the infrastructure for compliance or security reasons.
+For workloads requiring continuous server operation, like traditional web servers.
+
+Architecture:
+
+Lambda runs on shared physical infrastructure managed by AWS.
+It leverages virtualization to create micro VMs, each serving as an isolated environment for executing Lambda functions.
+
+
+
+AWS LAMBDA:
+https://docs.aws.amazon.com/lambda/latest/dg/getting-started.html
+
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "s3-object-lambda:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get*",
+                "s3:List*",
+                "s3:Describe*",
+                "s3-object-lambda:Get*",
+                "s3-object-lambda:List*"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+============================================
+
+ntroduction
+Boto3 is the Amazon Web Services (AWS) Software Development Kit (SDK) for Python, which allows developers to integrate their Python applications, scripts, and services with AWS. 
+
+Boto3 provides an easy-to-use, object-oriented API, as well as low-level access to AWS services.
+
+
+import boto3
+
+# Initialize a session using your AWS credentials
+session = boto3.Session(
+    aws_access_key_id='YOUR_ACCESS_KEY',
+    aws_secret_access_key='YOUR_SECRET_KEY',
+    region_name='YOUR_REGION'
+)
+
+response = s3.create_bucket(Bucket='my-new-bucket')
+print(response)
+
+
+---------------------------------
+
+
+import boto3
+
+def lambda_handler(event, context):
+    client = boto3.client('s3')
+    
+    # Create S3 bucket
+    response = client.create_bucket(
+        Bucket='my_demo_27822782',
+        CreateBucketConfiguration={
+            'LocationConstraint': 'ap-south-2'  # HYD India region
+        }
+    )
+    
+    # Print response for verification
+    print(response)
+
+{
+  "errorMessage": "An error occurred (InvalidBucketName) when calling the CreateBucket operation: The specified bucket is not valid.",
+  "errorType": "ClientError",
+  "requestId": "9d37963f-1f25-4f8f-a160-b1c3fa65fe53",
+  "stackTrace": [
+    "  File \"/var/task/lambda_function.py\", line 7, in lambda_handler\n    response = client.create_bucket(\n",
+    "  File \"/var/lang/lib/python3.12/site-packages/botocore/client.py\", line 553, in _api_call\n    return self._make_api_call(operation_name, kwargs)\n",
+    "  File \"/var/lang/lib/python3.12/site-packages/botocore/client.py\", line 1009, in _make_api_call\n    raise error_class(parsed_response, operation_name)\n"
+  ]
+}
+
+
+
+
+START RequestId: 80973937-c641-485e-adf4-37f4442d93fb Version: $LATEST
+{'ResponseMetadata': {'RequestId': 'QFS9F4J9N79QHBXQ', 'HostId': 'jm4YiBqBIMNPZfX0uIQmgQ8Qk1QNJs5K6Rz8H/Gi+0QKkUsUZsVX2cDlnsp87gSejQ0HvD4TSJ4=', 'HTTPStatusCode': 200, 'HTTPHeaders': {'x-amz-id-2': 'jm4YiBqBIMNPZfX0uIQmgQ8Qk1QNJs5K6Rz8H/Gi+0QKkUsUZsVX2cDlnsp87gSejQ0HvD4TSJ4=', 'x-amz-request-id': 'QFS9F4J9N79QHBXQ', 'date': 'Sun, 11 Aug 2024 07:30:31 GMT', 'location': 'http://mydemo27822782.s3.amazonaws.com/', 'server': 'AmazonS3', 'content-length': '0'}, 'RetryAttempts': 0}, 'Location': 'http://mydemo27822782.s3.amazonaws.com/'}
+END RequestId: 80973937-c641-485e-adf4-37f4442d93fb
+REPORT RequestId: 80973937-c641-485e-adf4-37f4442d93fb  Duration: 3591.02 ms    Billed Duration: 3592 ms    Memory Size: 128 MB Max Memory Used: 80 MB  Init Duration: 378.73 ms
+
+Request ID
+80973937-c641-485e-adf4-37f4442d93fb
+
+https://github.com/discover-devops/AWS-Lambda-API-Gateway-and-CDK/tree/main
+
+https://aws.amazon.com/ebs/getting-started/
+
+
+
+    Be responsible for the planning, implementation, and growth of the AWS cloud infrastructure
+    Build, release, and manage the configuration of all production systems
+    Manage a continuous integration and deployment methodology for server-based technologies
+    Work alongside architecture and engineering teams to design and implement any scalable software services
+    Ensure necessary system security by using best in class cloud security solutions
+    Implement continuous integration/continuous delivery (CI/CD) pipelines when necessary
+    Recommend process and architecture improvementsTroubleshoot the system and solve problems across all platform and application domains
+    Oversee pre-production acceptance testing to ensure the high quality of a companys services and products
+
+    Responsibilities
+Candidate with 2+ years of experience in managing Amazon Web Services (AWS) production and equivalent with below desired skill set.
+
+Desired Skill Set
+1. Strong knowledge on below services.
+EC2 (Load Balancer/Security Groups/EBS/Launch template/ASG etc..,)
+IAM
+S3
+Cloud watch
+Cloud front
+Cloud trail
+EKS
+RDS / Elasticache / Open search
+Lambda
+VPC
+Route 53
+Simple Notification Service
+Guard Duty / Config (Basic understanding)
+AWS cost explorer(Athena/Quicksight - Basic understanding)
+2. Devops tools like : Terraform/Jenkins/Cloudformation (Any one)
+3. Knowledge on any one scripting language (Like Python/Node etc..,)
+
+Optional Certification requirements:
+1. Optionally any one.
+a. AWS Certified Cloud Practitioner - Foundational (Basic)
+b. AWS Certified Solutions Architect - Associative (advantage)
+c. AWS Certified SysOps Administrator - Associative (advantage) 
+
+
+https://www.linkedin.com/in/kumar-saurabh-31ba4519b/
