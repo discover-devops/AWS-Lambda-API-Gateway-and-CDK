@@ -99,3 +99,5 @@ AWS API Gateway is a powerful service for building and managing APIs in the clou
 ---
 
 This document provides a high-level overview of AWS API Gateway, covering its features, use cases, and step-by-step guidance on building and managing APIs. It serves as a foundational resource for developers and architects looking to leverage AWS API Gateway in their projects.
+
+Refrences: https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-endpoint-types.html
