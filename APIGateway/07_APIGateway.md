@@ -18,6 +18,9 @@ Continuing from where we left off, once you've set up the authorizer in AWS API 
      3. **Token Validation:** When users log in, they receive a JWT token from Cognito, which they will use to access your API. API Gateway will validate this token with Cognito before allowing access.
      4. **Testing:** Make API requests using the JWT token obtained from Cognito and check if the API Gateway successfully validates the token and grants access.
 
+![image](https://github.com/user-attachments/assets/980a07e7-253f-4e8d-a48f-7b3711264125)
+
+
 ### 3. **Using Lambda Authorizers for Third-Party Authentication**
    - **Scenario:** When you need to authenticate requests using a third-party identity provider (like Google, Facebook, or any custom provider).
    - **Steps:**
@@ -26,6 +29,9 @@ Continuing from where we left off, once you've set up the authorizer in AWS API 
      3. **Token Validation:** The Lambda authorizer will receive the token or parameters from the API request, validate them, and return an IAM policy that allows or denies access.
      4. **Caching:** Enable caching if your Lambda authorizer might be used frequently to improve performance and reduce costs.
      5. **Testing:** Test the integration by making API requests with valid and invalid tokens to ensure the Lambda authorizer correctly grants or denies access.
+
+![image](https://github.com/user-attachments/assets/aef10211-71d4-4d9d-9c6c-f9178bd21c40)
+
 
 ### **Usage Plans and API Keys Recap**
    - **Usage Plans:** These are used to define throttling and quota limits for different tiers of API consumers (e.g., Basic, Premium).
