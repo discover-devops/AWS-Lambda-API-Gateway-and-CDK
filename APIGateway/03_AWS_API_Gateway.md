@@ -75,13 +75,22 @@ AWS API Gateway offers three endpoint types, each catering to different network 
 - **Purpose**: Optimized for global applications where users are spread across different regions.
 - **Use Case**: Ideal for applications requiring low-latency access from users worldwide.
 
+![image](https://github.com/user-attachments/assets/f332ee61-3426-4fd3-bb82-875a34e4c9ac)
+
+
 #### 6.2 **Regional Endpoints**
 - **Purpose**: Designed for applications where users are concentrated in a specific region.
 - **Use Case**: Best suited for region-specific applications, such as those targeting users in India, Japan, or the US.
 
+![image](https://github.com/user-attachments/assets/f20759f4-23a8-48fe-af5c-177779a7430c)
+
+
 #### 6.3 **Private Endpoints**
 - **Purpose**: Provides secure API access over a private network, not accessible via the public internet.
 - **Use Case**: Essential for industries requiring strict security controls, such as banking or pharmaceuticals.
+
+![image](https://github.com/user-attachments/assets/fbde35c7-1391-418b-a1b4-fe150735f234)
+
 
 ### 7. **Building a REST API with AWS API Gateway**
 
