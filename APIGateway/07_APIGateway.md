@@ -7,6 +7,9 @@ Continuing from where we left off, once you've set up the authorizer in AWS API 
      2. **Cross-Account Access:** If the request originates from a different AWS account, you'll need to configure a Resource Policy in your API Gateway. This policy specifies which accounts or services are allowed to invoke the API.
      3. **Testing:** After setting up, use a tool like `Postman` or `curl` to make API requests from the configured IAM role and verify that the requests are authenticated and authorized as expected.
 
+![image](https://github.com/user-attachments/assets/e6441377-f435-458b-81a2-aa51cb068e3a)
+
+
 ### 2. **Using Cognito User Pools for Web/Mobile Apps**
    - **Scenario:** Ideal when the API is consumed by external users (e.g., via a web or mobile application).
    - **Steps:**
