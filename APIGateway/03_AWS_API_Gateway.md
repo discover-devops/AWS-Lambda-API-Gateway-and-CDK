@@ -16,6 +16,11 @@ AWS API Gateway is a managed service that allows developers to create and manage
 - **WebSocket APIs**: Facilitate persistent connections for real-time applications like chat apps or live dashboards.
 - **Private REST APIs**: Offer secure API access over private networks, ideal for industries with strict regulatory requirements.
 
+
+![image](https://github.com/user-attachments/assets/3d60c3a3-c699-4d15-94c3-cce59a8bea60)
+
+
+
 ### 3. **AWS API Gateway Architecture**
 
 AWS API Gateway acts as an interface between API consumers and backend services. It ensures that all API requests are authenticated, authorized, and routed to the appropriate backend service, whether it's AWS Lambda, EC2 instances, Kinesis streams, DynamoDB, or any publicly accessible HTTP endpoint. It can also connect securely to on-premises data centers via private links.
