@@ -4,6 +4,9 @@
 
 In this lab, we will explore a serverless architecture using AWS Lambda, API Gateway, and S3. The objective is to create an API that, when invoked, triggers a Lambda function. This Lambda function will read JSON data from an S3 bucket. Initially, we'll hardcode the bucket and object names in the Lambda function. In the next part, we'll enhance this by making the Lambda function dynamic, allowing it to read data from different buckets based on query string parameters passed in the API request.
 
+![image](https://github.com/user-attachments/assets/a9312b79-34a1-49bc-b500-0a2899617944)
+
+
 ### **Hands-on Lab Steps:**
 
 #### **1. Create S3 Buckets and Upload JSON Files**
