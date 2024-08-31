@@ -14,4 +14,8 @@ In our restaurant analogy, imagine the waiter being responsible not just for tak
 
 An API Gateway simplifies the process for clients by providing a single, unified API for all the services behind it. This centralization enhances security, improves performance, and simplifies the management of APIs, especially in complex environments where multiple services need to be coordinated. 
 
+![image](https://github.com/user-attachments/assets/573e19e3-e62e-4d2c-ab83-b92a5951e967)
+
+
+
 In summary, while APIs enable communication between software components, an API Gateway optimizes and manages this communication, ensuring efficient, secure, and scalable interactions in modern application architectures.
