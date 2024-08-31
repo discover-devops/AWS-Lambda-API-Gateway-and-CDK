@@ -28,7 +28,7 @@ In software engineering, an **API Gateway** is a server that sits between client
 Much like the orchestrator in the kitchen, the API Gateway manages the flow of data between the client and the backend services. It ensures that requests are routed to the correct service, handles load balancing, manages security and authentication, and even deals with rate limiting and throttling when the system is under heavy load.
 
 
-![image](https://github.com/user-attachments/assets/c225d900-3e52-4552-8a9b-c5d178bab98f)
+
 
 
 
@@ -52,6 +52,9 @@ Let's break down the primary functions of an API Gateway:
 ### Integration with AWS Lambda
 
 In the context of cloud computing, an API Gateway often works in conjunction with **AWS Lambda**, a serverless computing service. AWS Lambda allows you to run code in response to events without provisioning or managing servers. 
+
+
+![image](https://github.com/user-attachments/assets/c225d900-3e52-4552-8a9b-c5d178bab98f)
 
 Here’s how it fits into the picture:
 
