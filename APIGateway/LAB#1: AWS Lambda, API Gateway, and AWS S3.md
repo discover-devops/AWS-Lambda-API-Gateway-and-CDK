@@ -12,28 +12,28 @@ In this lab, we will explore a serverless architecture using AWS Lambda, API Gat
 #### **1. Create S3 Buckets and Upload JSON Files**
 
 - **Step 1:** Create two S3 buckets.
-  - **Bucket 1:** `first-09-01-09`
-  - **Bucket 2:** `second-09-01-09`
+  - **Bucket 1:** `first-31-08-24`
+  - **Bucket 2:** `second-31-08-24`
   
 - **Step 2:** Upload a JSON file to each bucket.
   - **Bucket 1 JSON:**
     ```json
     {
-        "name": "John",
+        "name": "kumar",
         "age": 22
     }
     ```
   - **Bucket 2 JSON:**
     ```json
     {
-        "name": "Doe",
+        "name": "saurabh",
         "age": 32
     }
     ```
 
 #### **2. Create an AWS Lambda Function**
 
-- **Step 1:** Go to the AWS Lambda console and create a new Lambda function named `s3-read-09-01-09` using Python as the runtime.
+- **Step 1:** Go to the AWS Lambda console and create a new Lambda function named `s3-read-31-08-24` using Python as the runtime.
 
 - **Step 2:** Increase the timeout for the function to 1 minute under the General Configuration settings.
 
@@ -48,7 +48,7 @@ In this lab, we will explore a serverless architecture using AWS Lambda, API Gat
     s3 = boto3.client('s3')
 
     def lambda_handler(event, context):
-        bucket_name = 'first-09-01-09'
+        bucket_name = 'first-31-08-24'
         key = 'your-json-file.json'
         
         response = s3.get_object(Bucket=bucket_name, Key=key)
