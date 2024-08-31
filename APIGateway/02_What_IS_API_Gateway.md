@@ -16,12 +16,14 @@ Imagine you are not the only person in the restaurant. There are two other custo
 
 This role is played by the orchestrator in the kitchen, who receives all orders and routes them to the appropriate stations. This orchestrator is akin to an **API Gateway** in software systems.
 
-![image](https://github.com/user-attachments/assets/fdccc418-68be-4729-89b3-709d7e9f0622)
 
 
 ### What is an API Gateway?
 
 In software engineering, an **API Gateway** is a server that sits between clients (such as web browsers or mobile apps) and backend services. It acts as a reverse proxy to accept all application programming interface (API) calls, aggregate the various services required to fulfill them, and return the appropriate result.
+
+![image](https://github.com/user-attachments/assets/fdccc418-68be-4729-89b3-709d7e9f0622)
+
 
 Much like the orchestrator in the kitchen, the API Gateway manages the flow of data between the client and the backend services. It ensures that requests are routed to the correct service, handles load balancing, manages security and authentication, and even deals with rate limiting and throttling when the system is under heavy load.
 
