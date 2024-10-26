@@ -2,7 +2,11 @@ Links: https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-a
 https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-resource-policies.html
 
 
-Here’s the full step-by-step guide for creating an API Gateway integrated with the Lambda function you’ve created. This covers the steps from creating the API Gateway to customizing requests and responses.
+tep-by-step guide for creating an API Gateway integrated with the Lambda function you’ve created. This covers the steps from creating the API Gateway to customizing requests and responses.
+
+
+![image](https://github.com/user-attachments/assets/7e33ef79-af87-48af-93c2-245c4c718b73)
+
 
 ---
 
