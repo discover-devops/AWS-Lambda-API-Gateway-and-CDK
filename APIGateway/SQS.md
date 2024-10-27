@@ -1,4 +1,4 @@
-Yes, you can authenticate AWS SQS without using secrets by utilizing **IAM roles**. Here are the approaches and best practices you can follow for **authentication and securing AWS SQS**, especially when your application is running outside AWS:
+You can authenticate AWS SQS without using secrets by utilizing **IAM roles**. Here are the approaches and best practices you can follow for **authentication and securing AWS SQS**, especially when your application is running outside AWS:
 
 ### 1. **IAM Roles for Authentication**
 
