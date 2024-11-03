@@ -43,6 +43,10 @@ Amazon Cognito is an ideal choice for handling authentication when you have exte
 #### **Use Case**
 - **External Users**: Ideal for scenarios where you have user-facing applications (web or mobile) and need to authenticate and authorize external users.
 
+
+![image](https://github.com/user-attachments/assets/138fec19-e5e4-442a-b68f-41857d28a1f8)
+
+
 #### **How It Works**
 1. A client (such as a mobile app) sends an authentication request to Amazon Cognito User Pool.
 2. Cognito authenticates the user and, upon successful authentication, issues a **token** (JWT token).
