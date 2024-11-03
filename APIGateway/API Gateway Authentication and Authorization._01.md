@@ -69,6 +69,10 @@ Lambda Authorizers allow you to build custom authentication and authorization so
 - **Third-Party Authentication**: When you want to use an external identity provider to authenticate users.
 - **Custom Authorization Logic**: Useful for complex authorization logic beyond what IAM and Cognito User Pools offer.
 
+
+![image](https://github.com/user-attachments/assets/175dc663-93b1-4fe4-86f7-6affb9d3683d)
+
+
 #### **How It Works**
 1. A client authenticates with a third-party identity provider, receiving a **bearer token** or other authentication credentials.
 2. The client includes this token in requests to API Gateway.
