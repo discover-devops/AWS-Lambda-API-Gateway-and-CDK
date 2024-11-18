@@ -44,7 +44,8 @@ Amazon Cognito is an ideal choice for handling authentication when you have exte
 - **External Users**: Ideal for scenarios where you have user-facing applications (web or mobile) and need to authenticate and authorize external users.
 
 
-![image](https://github.com/user-attachments/assets/138fec19-e5e4-442a-b68f-41857d28a1f8)
+![image](https://github.com/user-attachments/assets/0a6ccf51-7fae-4b2e-a6b6-14ebff1473bc)
+
 
 
 #### **How It Works**
@@ -70,7 +71,8 @@ Lambda Authorizers allow you to build custom authentication and authorization so
 - **Custom Authorization Logic**: Useful for complex authorization logic beyond what IAM and Cognito User Pools offer.
 
 
-![image](https://github.com/user-attachments/assets/175dc663-93b1-4fe4-86f7-6affb9d3683d)
+![image](https://github.com/user-attachments/assets/ef66c6be-028a-4026-9068-46b9167b01a7)
+
 
 
 #### **How It Works**
